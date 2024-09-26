@@ -16,11 +16,7 @@ def compute_loss(y, tx, w):
         the value of the loss (a scalar), corresponding to the input parameters w.
     """
     # ***************************************************
-    #predictions = tx.dot(w) #X tilde * w
-    #e = y - predictions
-    
-    #MSE = (1/(2*y.size)) * np.dot(e.T, e)
+    # INSERT YOUR CODE HERE
+    # TODO: compute loss by MSE
     # ***************************************************
-    #return MSE
-    return np.mean((y - tx.dot(w)) ** 2) / 2
-
+    raise NotImplementedError

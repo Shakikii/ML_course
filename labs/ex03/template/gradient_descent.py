@@ -3,7 +3,7 @@
 
 Gradient Descent
 """
-
+from costs import compute_loss
 
 def compute_gradient(y, tx, w):
     """Computes the gradient at w.

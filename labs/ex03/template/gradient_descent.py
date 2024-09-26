@@ -16,11 +16,7 @@ def compute_gradient(y, tx, w):
     Returns:
         An array of shape (2, ) (same shape as w), containing the gradient of the loss at w.
     """
-    # ***************************************************
-    # INSERT YOUR CODE HERE
-    # TODO: compute gradient vector
-    # ***************************************************
-    raise NotImplementedError
+    return -tx.T.dot(y - tx.dot(w)) / y.size
 
 
 def gradient_descent(y, tx, initial_w, max_iters, gamma):
@@ -37,23 +33,10 @@ def gradient_descent(y, tx, initial_w, max_iters, gamma):
         losses: a list of length max_iters containing the loss value (scalar) for each iteration of GD
         ws: a list of length max_iters containing the model parameters as numpy arrays of shape (2, ), for each iteration of GD
     """
-    # Define parameters to store w and loss
-    ws = [initial_w]
-    losses = []
-    w = initial_w
+    ws, losses, w = [initial_w], [], initial_w
     for n_iter in range(max_iters):
-        # ***************************************************
-        # INSERT YOUR CODE HERE
-        # TODO: compute gradient and loss
-        # ***************************************************
-        raise NotImplementedError
-        # ***************************************************
-        # INSERT YOUR CODE HERE
-        # TODO: update w by gradient
-        # ***************************************************
-        raise NotImplementedError
-
-        # store w and loss
+        loss = compute_loss(y, tx, w)
+        w -= gamma * compute_gradient(y, tx, w)
         ws.append(w)
         losses.append(loss)
         print(

@@ -43,3 +43,26 @@ def grid_search(y, tx, grid_w0, grid_w1):
     # ***************************************************
     #raise NotImplementedError
     return losses
+
+# def grid_search(y, tx, grid_w0, grid_w1):
+#     """Algorithm for grid search."""
+#     # Create a meshgrid of w0 and w1 values
+#     W0, W1 = np.meshgrid(grid_w0, grid_w1)
+    
+#     # Reshape meshgrid matrices into vectors for broadcasting
+#     w0_flat = W0.flatten()
+#     w1_flat = W1.flatten()
+    
+#     # Compute predictions and loss in a vectorized manner
+#     tx_flat = np.repeat(tx, len(grid_w0) * len(grid_w1), axis=0)
+#     predictions = tx_flat.dot(np.column_stack((w0_flat, w1_flat)).T)
+#     e = np.repeat(y, len(grid_w0) * len(grid_w1)) - predictions
+#     loss_flat = np.mean(np.square(e), axis=0) / 2
+    
+#     # Reshape the loss vector back into the grid shape
+#     losses = loss_flat.reshape(len(grid_w0), len(grid_w1))
+    
+#     return losses
+
+#ctrl+K puis crtl+C   et ctrl+K puis crtl+U pour enlever
+

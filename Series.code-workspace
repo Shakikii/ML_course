@@ -4,5 +4,10 @@
 			"path": ".."
 		}
 	],
-	"settings": {}
+	"settings": {
+		"vscode-pets.petColor": "orange",
+		"vscode-pets.petSize": "medium",
+		"vscode-pets.theme": "castle",
+		"vscode-pets.throwBallWithMouse": true
+	}
 }
